@@ -183,9 +183,6 @@ paylaşılmak zorundadır.
 | **Data Mining** | Örüntü tanıma | Müşteri churn tahmini |
 
 
-> 📊 Grafik Açıklaması:  
-BI dashboard örneği – satırlar, renkler, trendlerle birlikte  
-
 ---
 
 ## İş Zekasının Avantajları
