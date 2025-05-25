@@ -7,7 +7,7 @@ AMA her bir yer farklı iş yapar.
 **Veritabanı**, günlük işlemler için kullanılır.  
 **Veri Ambarı**, analizler için saklanır.  
 
-Sayılar sessizken,  
+Veriler sessizken,  
 onları nerede tuttuğumuz önemlidir.  
 Çünkü veriyi nasıl saklarsan,  
 önceki gibi analiz edersin.

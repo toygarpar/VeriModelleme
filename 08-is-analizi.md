@@ -70,7 +70,7 @@ Hangi beceriler gerekli?
 3. **Analiz**: Verilerin yapılandırılması ve yorumlanması
 4. **Raporlama**: Bulguların paydaşlara sunulması
 
-### Süreçleri:
+### Aşamaları:
 1. **Planlama:** Ne yapılacak? Nasıl çalışacak?
 2. **Hazırlık:** Hangi veriler gerekiyor?
 3. **Örgütlenme:** Kim hangi rolde yer alacak?
