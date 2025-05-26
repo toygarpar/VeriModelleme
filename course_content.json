@@ -1,0 +1,77 @@
+{
+  "site_title": "Veri Modelleme",
+  "author": "toygarpar",
+  "intro": "Bu eğitimin amacı, veri, iş analizi ve zekâsı, veri modelleme kavramlarının derinlemesine anlamak ve yönetimi hakkında bilgi edinmeyi öğrenmek isteyenler için hazırlanmıştır.",
+  "posts": [
+    {
+      "title": "Veri Hiyerarşisi",
+      "date": "2025-06-01",
+      "summary": "Veriden bilgiye giden yolda hiyerarşik yapı: Veri, bilgi, bilgelik arasındaki farklar.",
+      "post": "posts/01-veri-hiyerarsisi.md",
+      "tags": ["veri", "bilgi", "hiyerarşi", "temel kavram"]
+    },
+    {
+      "title": "Veri Yapısı",
+      "date": "2025-06-02",
+      "summary": "Verinin yapısal olarak nasıl organize edildiği ve farklı veri yapıları nelerdir?",
+      "post": "posts/02-veri-yapisi.md",
+      "tags": ["veri yapısı", "data structure", "veri türleri"]
+    },
+    {
+      "title": "Veri Modelleme",
+      "date": "2025-06-03",
+      "summary": "Veri modellemeye giriş: Neden modelleriz? Hangi yaklaşımlar vardır?",
+      "post": "posts/03-veri-modelleme.md",
+      "tags": ["modelleme", "veri modeli", "yapılandırma"]
+    },
+    {
+      "title": "Veri Modelleri ve Türleri",
+      "date": "2025-06-04",
+      "summary": "İlişkisel, hiyerarşik, ağ ve NoSQL veri modelleri hakkında genel bakış.",
+      "post": "posts/04-veri-modelleri-turleri.md",
+      "tags": ["veri modelleri", "ilişkisel", "NoSQL", "yapı"]
+    },
+    {
+      "title": "Veri Kalitesi ve Bütünlüğü",
+      "date": "2025-06-05",
+      "summary": "Veri kalitesi nedir? Nasıl sağlanır? Eksik değerler, doğrulama ve bütünlük kuralları.",
+      "post": "posts/05-veri-kalitesi-ve-butunlugu.md",
+      "tags": ["veri kalitesi", "doğrulama", "eksik veri", "bütünlük"]
+    },
+    {
+      "title": "Veri Görselleştirme",
+      "date": "2025-06-06",
+      "summary": "Sayıları görsellere dönüştürmek: Grafikler, tablolar ve dashboard örnekleri.",
+      "post": "posts/06-veri-gorsellestirme.md",
+      "tags": ["görselleştirme", "grafik", "matplotlib", "seaborn"]
+    },
+    {
+      "title": "Veri Tabanı ve Ambarı",
+      "date": "2025-06-07",
+      "summary": "Veri tabanı ile ambar arasındaki farklar ve kullanım alanları.",
+      "post": "posts/07-veri-tabani-ve-ambari.md",
+      "tags": ["veritabanı", "veri ambarı", "ETL", "OLAP"]
+    },
+    {
+      "title": "İş Analizi",
+      "date": "2025-06-08",
+      "summary": "İş süreçlerine göre verilerin analizi ve raporlanması.",
+      "post": "posts/08-is-analizi.md",
+      "tags": ["iş analizi", "veri analizi", "insights"]
+    },
+    {
+      "title": "Kullanıcı Arayüzü Kavramı",
+      "date": "2025-06-09",
+      "summary": "Veri ürünlerinde kullanıcı arayüz tasarımı ve etkileri.",
+      "post": "posts/09-kullanici-arayuzu-kavrami.md",
+      "tags": ["UI", "kullanıcı deneyimi", "dashboard", "tasarım"]
+    },
+    {
+      "title": "Veri Madenciliği Nedir?",
+      "date": "2025-06-10",
+      "summary": "Veri madenciliğine giriş: Örüntüler, ilişkiler ve keşifsel analiz.",
+      "post": "posts/10-veri-madenciligi.md",
+      "tags": ["veri madenciliği", "pattern discovery", "analiz"]
+    }
+  ]
+}

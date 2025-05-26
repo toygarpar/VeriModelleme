@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Veri Hiyerarşisi</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>Veri Hiyerarşisi</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-01</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>bilgi</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>hiyerarşi</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>temel kavram</span>
+        <div class='prose max-w-none mt-4'><h1>Veri Hiyerarşisi</h1>
+<h2>Data → Information → Knowledge → Wisdom</h2>
+<h3>Bilgiyi Anlamak İçin Dört Basamak</h3>
+<p>Veri bilimi, veriden başlar.<br />
+AMA veri tek başına anlam taşımaz.<br />
+Raw veri sessizdir.<br />
+Onların konuşmasını sağlamak için bir yol vardır.<br />
+Bu yol, dört basamaktan geçer.</p>
+<ol>
+<li><strong>Data (Veri)</strong> – Sayılar, harfler, işaretler  </li>
+<li><strong>Information (Bilgi)</strong> – Bu verilerin düzenlenmiş hali  </li>
+<li><strong>Knowledge (Bilgeliğe Giden Yol)</strong> – Birden fazla bilginin birleşimi  </li>
+<li><strong>Wisdom (Bilgelik)</strong> – Uzun vadeli karar alma  </li>
+</ol>
+<p>Bu modele <strong>DIKW Piramidi</strong> denir.<br />
+Türkçesiyle:<br />
+<strong>Veri → Bilgi → Bilgeliğe Yolculuk → Bilgelik</strong></p>
+<hr />
+<h2>1. Veri (Data)</h2>
+<p>Veri, hamdır.<br />
+İşlenmemiştir.<br />
+Sayılar, metinler, resimler, sesler<br />
+hepsi veridir.</p>
+<p>AMA tek başına anlamı yoktur.<br />
+Örneğin:  </p>
+<blockquote>
+<p>“70” sadece bir sayıdır.<br />
+Neyin 70?<br />
+Sıcaklık mı? Sipariş sayısı mı?<br />
+Veri, bağlam olmadan anlamsız kalır.</p>
+</blockquote>
+<h3>Özellikleri:</h3>
+<ul>
+<li>Ham maddedir  </li>
+<li>Sayısal veya kategorik olabilir  </li>
+<li>Kaynaklardan gelir: sensörler, log dosyaları, kullanıcı etkileşimleri  </li>
+<li>Kendi başına karar verici değildir  </li>
+</ul>
+<hr />
+<h2>2. Enformasyon (Information)</h2>
+<p>Veri işlenir.<br />
+Düzenlenir.<br />
+Yeni bir anlam kazanır.<br />
+Ve artık bilgi olur.</p>
+<p>Bilgi, sorulara cevap verir.<br />
+Kimde? Ne zaman? Nerede? Kaç tane?</p>
+<p>Ex:  </p>
+<blockquote>
+<p>“70” sadece bir sayıydı.<br />
+AMA “Geçen ay İstanbul’da 70 ürün satıldı.” olduysa<br />
+artık bu bir bilgidir.</p>
+</blockquote>
+<h3>Özellikleri:</h3>
+<ul>
+<li>Veriye anlam katılmıştır  </li>
+<li>Bağlam eklenmiştir  </li>
+<li>Tablo, grafik ya da rapor şeklinde ifade edilebilir  </li>
+<li>Karar almak için kullanılır ama yeterli değildir  </li>
+</ul>
+<hr />
+<h2>3. Bilgeliğe Giden Yol - Bilgi (Knowledge)</h2>
+<p>Birden fazla bilgi bir araya gelir.<br />
+Karşılaştırılır.<br />
+Analiz edilir.<br />
+Yorumlanır.<br />
+Sonunda bir bağlamda bilgiler bütünü oluşur.</p>
+<p>Bu bilgi bağlamı, neden-sonuç ilişkisini gösterir.<br />
+Trendleri fark eder.<br />
+Sebep-sonuç bağlantılarını kurar.</p>
+<p>Ex:  </p>
+<blockquote>
+<p>“Geçen ay 70 ürün satıldı.”<br />
+AMA “bu ay 90 ürün satıldı.”<br />
+Ve “geçen yıl aynı dönemde 60 ürün satıldı.”<br />
+Artık bir karşılaştırma var.<br />
+Satış artışı var.<br />
+Neden?<br />
+Reklam mı? Fiyat düşüşü mü?<br />
+Bu sorular bilgi ile başlar.<br />
+AMA bilgeliği burada doğar.</p>
+</blockquote>
+<h3>Özellikleri:</h3>
+<ul>
+<li>Birden fazla bilginin sentezidir  </li>
+<li>Deneyim ve analizle zenginleşir  </li>
+<li>Sebep-sonuç ilişkisi kurulmuştur  </li>
+<li>Stratejik planlamalarda kullanılır  </li>
+</ul>
+<hr />
+<h2>4. Bilgelik (Wisdom)</h2>
+<p>Bilgi bize ne olduğunu söyler.<br />
+AMA ne yapmamız gerektiğini söylemez.<br />
+Bu yüzden en yüksek basamak budur:<br />
+<strong>Bilgelik.</strong></p>
+<p>Burada verilerin ötesine geçilir.<br />
+Uzun vadede ne yapılması gerektiği düşünülür.<br />
+Etik, değerler, insan faktörü gibi şeyler göz önünde bulundurulur.</p>
+<p>Ex:  </p>
+<blockquote>
+<p>Satışlar arttı.<br />
+AMA bu artış sürdürülebilir mi?<br />
+Hangi strateji uzun vadede doğru olur?<br />
+Müşteri memnuniyeti de arttı mı?</p>
+</blockquote>
+<h3>Özellikleri:</h3>
+<ul>
+<li>Gelecek odaklıdır  </li>
+<li>Etik yönü vardır  </li>
+<li>Değer yargıları içerir  </li>
+<li>Karar verme aşamasıdır  </li>
+</ul>
+<hr />
+<h2>DIKW Piramidi – Görsel Açıklama</h2>
+<div class="codehilite"><pre><span></span><code>         Wisdom
+            ↑
+       Knowledge
+            ↑
+     Information
+            ↑
+        Data
+</code></pre></div>
+
+<p>Her basamak öncekinin üzerine inşa edilir.<br />
+Veri olmadan bilgi olmaz.<br />
+Enformasyon olmadan bilgiye ulaşamazsın.<br />
+Bilginin eksik olduğu yerde bilgelik doğmaz.</p>
+<hr />
+<h2>DIKW Örneği: Bir E-Ticaret Sitesinde</h2>
+<table>
+<thead>
+<tr>
+<th>Seviye</th>
+<th>Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data</strong></td>
+<td>Ürün ID: 1001, Tarih: 01.05.2025, Miktar: 1</td>
+</tr>
+<tr>
+<td><strong>Information</strong></td>
+<td>01.05.2025 tarihinde ürün 1001&rsquo;den 1 adet satıldı</td>
+</tr>
+<tr>
+<td><strong>Knowledge</strong></td>
+<td>Ürün 1001’in satışları son 3 ayda %20 arttı. Reklam kampanyası etkili oldu mu?</td>
+</tr>
+<tr>
+<td><strong>Wisdom</strong></td>
+<td>Kampanya devam edecek mi? Uzun vadede marka imajına katkı sağlıyor mu?</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Son Söz</h2>
+<p>Veri bilimi;<br />
+veri toplamakla başlar.<br />
+AMA veri ile bitmez.<br />
+Veriden nformasyon çıkarılır.<br />
+Bilgi ile bilgeliğe gidilir.<br />
+Ve en sonunda bilginin ötesinde bilgelik doğar.</p>
+<p>DIKW piramidi,<br />
+veriden hikâyeye,<br />
+hamdan anlama/bağlama yolculuktur.</p></div>
+    </div>
+</body>
+</html>

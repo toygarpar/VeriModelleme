@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Veri Yapısı</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>Veri Yapısı</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-02</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri yapısı</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>data structure</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri türleri</span>
+        <div class='prose max-w-none mt-4'><h1>Veri Yapıları / Data Structure</h1>
+<h2>Veri Nasıl Saklanır? Nasıl Yapılanır?</h2>
+<p>Veriler farklı şekillerde saklanabilir.<br />
+Her veri farklı bir yapıyla işlenebilir.<br />
+Bu yüzden veri yapılarını bilmek önemlidir.</p>
+<p>Veri yapıları, verinin nasıl düzenlendiğini gösterir.<br />
+Modeller ise bu yapıların nasıl kullanılacağını anlatır.</p>
+<p>Veri bilimciler bu yapılara göre karar alır.<br />
+Analiz eder.<br />
+Model kurar.<br />
+Ve anlam çıkarır.</p>
+<hr />
+<h2>Veri Yapıları ve Modeller</h2>
+<h3>1. Hiyerarşik Model</h3>
+<p>Veri ağaç şeklinde düzenlenir.<br />
+Bir ana düğüm vardır.<br />
+Alt düğümlere doğru inilir.</p>
+<p>Ex:<br />
+XML dosyaları hiyerarşik yapıya sahiptir.<br />
+Ana kategori → Alt kategoriler → Ürünler gibi.</p>
+<h3>2. Ağ Modeli</h3>
+<p>Hiyerarşik değil, ama bağlantılıdır.<br />
+Birden fazla ilişki olabilir.<br />
+Her düğüm birden fazla başka düğüme bağlanabilir.</p>
+<p>Ex:<br />
+Sosyal ağlar – kişi A ile B, C ile D ilişkili olabilir.</p>
+<h3>3. İlişkisel Model</h3>
+<p>En yaygın modellerden biridir.<br />
+Tablolar arasında ilişki kurulur.<br />
+SQL ile sorgulanır.</p>
+<p>Ex:<br />
+Müşteri tablosu → Sipariş tablosu<br />
+İki tablo ortak bir alan üzerinden bağlanır (customer_id)</p>
+<h3>4. Nesne Yönelimli Model</h3>
+<p>Veriler nesnelerle tanımlanır.<br />
+Her nesnenin özellikleri vardır.<br />
+Metotları vardır.<br />
+Bu yapılar programlamada sıkça kullanılır.</p>
+<p>Ex:<br />
+Python’da bir “müşteri” sınıfı oluşturulabilir.<br />
+Adı, soyadı, siparişleri bu sınıfta tanımlanır.</p>
+<hr />
+<h2>Veri Analizi Adımları</h2>
+<p>Veri yapısını bilmek yetmez.<br />
+Onu anlamak için adımlar vardır.</p>
+<h3>1. Verileri İnceleme</h3>
+<p>Sayılara bakılır.<br />
+Dağılım incelenir.<br />
+Boş değerler tespit edilir.<br />
+Outlier’lar görülür.</p>
+<h3>2. Verileri Temizleme</h3>
+<p>Eksik veriler tamamlanır.<br />
+Yanlış satırlar silinir.<br />
+Tutarlılık sağlanır.</p>
+<h3>3. Verileri Dönüştürme</h3>
+<p>Veri yeni forma sokulur.<br />
+Özellikler çıkarılır.<br />
+Değişkenler dönüştürülür.<br />
+Feature engineering yapılır.</p>
+<h3>4. Modelleme</h3>
+<p>Veri artık anlamlıdır.<br />
+Şimdi model kurulur.<br />
+Regresyon mu? Sınıflandırma mı?<br />
+Uygun model seçilir.</p>
+<hr />
+<h2>Veri Analiz Yöntemleri</h2>
+<h3>1. İstatistiksel Yöntemler</h3>
+<p>Ortalama, medyan, standart sapma gibi temel istatistikler kullanılır.<br />
+Sayılar arasında bağlantı kurulur.<br />
+Trendler bulunur.<br />
+Gelecek tahmin edilir.</p>
+<h3>2. Veri Madenciliği</h3>
+<p>Gizlenmiş desenleri bulmak içindir.<br />
+Sınıflandırma, kümeleme, regresyon gibi teknikler kullanılır.<br />
+Veriden bilgi çıkarılır.</p>
+<hr />
+<h2>Büyük Veri Kavramı</h2>
+<p>Veri arttıkça eski yöntemler yetersiz kalır.<br />
+Veri çok büyükse, çok hızlıysa ya da çok çeşitliyse,<br />
+bu veriye <strong>Büyük Veri (Big Data)</strong> denir.</p>
+<p>AMA büyük veri ne demektir?<br />
+Veri tek sunucuda işlem yapamıyorsa,<br />
+veri her dakika yenisiyle büyüyor ve değişiyorsa,<br />
+ve onu anlamak için özel araçlara ihtiyaç varsa,<br />
+bu veri büyük veridir.</p>
+<hr />
+<h2>Büyük Verinin Özellikleri – 6V</h2>
+<h3>1. Volume (Hacim)</h3>
+<p>Veri çok büyüktür.<br />
+Milyonlarca satır olabilir.<br />
+Diskte yer tutar.<br />
+AMA değeri yoksa, hacim önemsizdir.</p>
+<h3>2. Velocity (Hız)</h3>
+<p>Veri sürekli gelir.<br />
+Her milisaniyede yeni veri oluşur.<br />
+Gerçek zamanlı analiz gerekir.</p>
+<p>Ex:<br />
+Twitter tweetleri, IoT cihazlarından gelen veriler</p>
+<h3>3. Variety (Çeşitlilik)</h3>
+<p>Veri hem sayı olabilir hem de resim.<br />
+CSV, JSON, XML, video, ses gibi birçok formatta olabilir.<br />
+Çeşitli kaynaklardan gelir.</p>
+<h3>4. Veracity (Doğruluk)</h3>
+<p>Veri güvenilir mi?<br />
+Kaynağı nedir?<br />
+Yanlış mı? Eksik mi?<br />
+Düzenlenmemiş mi?</p>
+<p>Veracity, veri kalitesini ölçer.<br />
+Kalitesiz veri, yanlış karar verir.</p>
+<h3>5. Value (Değer)</h3>
+<p>Veri toplanmış ama faydası yoksa,<br />
+bu veri gereksizdir.<br />
+Elde edilen veri, şirketin işine yaramalıdır.<br />
+Değilse, depolanması bile boşuna olur.</p>
+<h3>6. Visualization (Görselleştirme)</h3>
+<p>Sayılar bazen sessiz kalır.<br />
+Görseller konuşur.<br />
+Grafikler trendleri gösterir.<br />
+Dashboard’lar karar verir.</p>
+<hr />
+<h2>Karşılaştırmalı Tablo: Veri Modelleri</h2>
+<table>
+<thead>
+<tr>
+<th>Model Türü</th>
+<th>Açıklama</th>
+<th>Kullanım Alanı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hiyerarşik</strong></td>
+<td>Ağaç yapısı</td>
+<td>XML, organizasyon yapıları</td>
+</tr>
+<tr>
+<td><strong>Ağ</strong></td>
+<td>Serbest bağlantılar</td>
+<td>Sosyal ağlar</td>
+</tr>
+<tr>
+<td><strong>İlişkisel</strong></td>
+<td>Tablo + ilişki</td>
+<td>SQL veritabanları</td>
+</tr>
+<tr>
+<td><strong>Nesne Yönelimli</strong></td>
+<td>Nesnelerle yapılandırma</td>
+<td>Python, Java</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Son Söz</h2>
+<p>Veri yapıları, veriyi anlamak için ilk adımın atılmasıdır.<br />
+Hiyerarşi, ağ, ilişki, nesne…<br />
+Her yapı farklıdır.<br />
+AMA hepsi aynı amaca hizmet eder:<br />
+<strong>Veriyi işlenebilir hale getirmek.</strong></p>
+<p>Büyük veri ise,<br />
+veriyi yönetmek için yeni yöntemler doğurmuştur.<br />
+Hız, hacim, çeşitlilik, doğruluk, değer ve görselleştirme<br />
+bütün bu V’ler birleşince<br />
+veri bilimi gerçek büyüklük kazanır.</p>
+<p>Veri olmadan analiz yoktur.<br />
+Yapı olmadan veri anlamsızdır.<br />
+Ve büyük veri olmadan geleceğe dair fikir çıkmaz.</p>
+<p>Veriler sessizken,<br />
+biz onları dinlemeliyiz.<br />
+Ve onların hangi yapıda olduğunu bilmeliyiz.</p></div>
+    </div>
+</body>
+</html>

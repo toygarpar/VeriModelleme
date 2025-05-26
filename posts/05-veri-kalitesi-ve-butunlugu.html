@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Veri Kalitesi ve Bütünlüğü</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>Veri Kalitesi ve Bütünlüğü</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-05</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri kalitesi</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>doğrulama</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>eksik veri</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>bütünlük</span>
+        <div class='prose max-w-none mt-4'><h1>Veri Kalitesi ve Bütünlüğü</h1>
+<h2>Sayılar Sessizken, Kalite Konuşur</h2>
+<p>Veri bilimi projelerinde veri her şeydir.<br />
+AMA veri kaliteli değilse,<br />
+analiz eksik olur.<br />
+Karar yanlış alınır.</p>
+<p>Veri kalitesi,<br />
+verinin doğru mu,<br />
+güvenilir mi,<br />
+eksik mi,<br />
+tutarlı mı<br />
+olduğunu gösterir.</p>
+<p>Ve veri bütünlüğü,<br />
+bu verilerin yaşam döngüsü boyunca<br />
+nasıl korunduğunu ifade eder.</p>
+<hr />
+<h2>Veri Nedir?</h2>
+<p>Veri kalitesi, verinin kullanım amacına uygun olup olmadığını gösterir. İyi bir veri, belirlenen gereksinimleri karşılar.</p>
+<p><strong>Veri Kalitesi Unsurları:</strong> Doğruluk, Güvenilirlik, Tamlık, Zamanlılık, Kapsamlılık, Tutarlılık, Detaylılık.</p>
+<ul>
+<li><strong>Doğruluk:</strong> Verinin doğru ve geçerli olması.</li>
+<li><strong>Güvenilirlik:</strong> Verinin toplanma, işlenme, saklanma ve kullanma süreçlerinde tutarlılık göstermesi.</li>
+<li><strong>Tamlık:</strong> Gerekli tüm verilerin eksiksiz, güncel ve uygun şekilde bulunması.</li>
+<li><strong>Zamanlılık:</strong> Veriye ait zaman bilgisinin doğru ve güncel olması.</li>
+<li><strong>Kapsamlılık:</strong> Gerekli tüm veri öğelerinin ve verinin bütününün, belirlenen kapsam dahilinde toplanması.</li>
+<li><strong>Tutarlılık:</strong> Verinin güvenilir olması ve tüm uygulamalarda aynı sonuçları vermesi.</li>
+<li><strong>Detaylılık:</strong> Verinin yeterli miktarda alt bilgiyi içermesi.</li>
+</ul>
+<p>Veri, bilginin işlenmemiş halidir.<br />
+Sayılar, harfler, işaretlerdir.<br />
+AMA anlam kazanması için yapılandırılmalıdır.</p>
+<p>Ex:<br />
+“Ahmet” → sadece bir isimdir.<br />
+AMA “Müşteri Adı: Ahmet” dersek, artık bağlam kazanmıştır.</p>
+<hr />
+<h2>Veri Kalitesi Nedir?</h2>
+<p>Kaliteli veri,<br />
+doğru zamanda,<br />
+doğru biçimde,<br />
+ve doğru amaca hizmet eden veridir.</p>
+<h3>Veri Kalitesinin Temel Özellikleri</h3>
+<h4>1. Doğruluk</h4>
+<p>Veri gerçekliği yansıtmalıdır.<br />
+Yanlış yazılmış bir yaş ya da fiyat,<br />
+kararları bozar.</p>
+<h4>2. Güvenilirlik</h4>
+<p>Veri toplanırken, işlenirken, saklanırken<br />
+her aşamada aynı sonucu vermeli.<br />
+Çünkü güvenilir veri, doğru karar demektir.</p>
+<h4>3. Tamlık</h4>
+<p>Tüm gerekli veriler mevcut olmalı.<br />
+Eksik satırlar yok olmalı.<br />
+Veri, analiz için tam olmalı.</p>
+<h4>4. Zamanlılık</h4>
+<p>Veri güncel olmalı.<br />
+Eski veri geçmişe aittir.<br />
+AMA biz gelecekteki kararlar için kullanıyoruz.</p>
+<h4>5. Kapsamlılık</h4>
+<p>Veri, belirlenen tüm alanları kapsamalı.<br />
+Eksik bırakılan nokta, eksik analiz demektir.</p>
+<h4>6. Tutarlılık</h4>
+<p>Farklı sistemlerdeki veri aynı olmalı.<br />
+Bir yerde “Erkek”, başka yerde “E” dememeli.<br />
+Tutarlılık, sistemin temelidir.</p>
+<h4>7. Detaylılık</h4>
+<p>Veri, istenen düzeyde detay içermeli.<br />
+Az detayla tahmin zordur.<br />
+Çok fazla detay ise yavaşlatır.</p>
+<hr />
+<h2>Veri Kalitesini Bozan Etmenler</h2>
+<p>Veri her zaman ideal değildir.<br />
+Kimisi hatalıdır.<br />
+Kimisi eksiktir.<br />
+Kimisi tekrar eder.<br />
+Kimisi de tutarsızdır.</p>
+<h3>En Yaygın Kalite Sorunları:</h3>
+<ul>
+<li><strong>İnsan hatası:</strong> Yanlış girilen değerler  </li>
+<li><strong>Sistem hatası:</strong> Yazılım çökmesi, veri kaybı  </li>
+<li><strong>Hatalı cihazlar:</strong> Sensörlerden gelen anormal veri  </li>
+<li><strong>Tekrarlı veri:</strong> Aynı müşteri iki kez kayıt olmuş  </li>
+<li><strong>Eksik veri:</strong> Bir hücre boş bırakılmış  </li>
+<li><strong>Geçersiz veri:</strong> Yaş 200 yazılmış  </li>
+</ul>
+<hr />
+<h2>Veri Temizleme Süreci</h2>
+<p>Temiz veri, temiz analiz demektir.<br />
+AMA veri her zaman temiz gelmez.<br />
+Bu yüzden adım adım ilerlemek gerekir.</p>
+<h3>1. <strong>Analiz</strong></h3>
+<p>Veriyi incele.<br />
+Nerede eksiklik var?<br />
+Nerede hata var?<br />
+Nasıl bir yol izlenecek?</p>
+<h3>2. <strong>Planlama</strong></h3>
+<p>Nasıl düzelteceksin?<br />
+Eksik veri nasıl doldurulacak?<br />
+Outlier’lar nasıl işlenecek?</p>
+<h3>3. <strong>Geliştirme</strong></h3>
+<p>Ham veriyi düzenle.<br />
+Eksik veriye ortalama ver.<br />
+Ya da sil.<br />
+Ya da regresyonla tahmin et.</p>
+<h3>4. <strong>Test ve Doğrulama</strong></h3>
+<p>Temizlenmiş veriyi test et.<br />
+Doğru sonuç verecek mi?<br />
+Hala tutarsız veri var mı?</p>
+<h3>5. <strong>Kaliteli Veri</strong></h3>
+<p>Artık veri analiz edilebilir.<br />
+Model kurulabilir.<br />
+Karar verilebilir.</p>
+<hr />
+<h2>Eksik Veri Nasıl İşlenir?</h2>
+<table>
+<thead>
+<tr>
+<th>Yöntem</th>
+<th>Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dropna()</code></td>
+<td>Eksik satırları silmek için kullanılır</td>
+</tr>
+<tr>
+<td><code>fillna(0)</code></td>
+<td>Eksik değerleri sabit bir sayı ile doldurmak için</td>
+</tr>
+<tr>
+<td><code>fillna(mean)</code></td>
+<td>Ortalama ile doldurma</td>
+</tr>
+<tr>
+<td><code>fillna(class mean)</code></td>
+<td>Sınıf ortalaması ile doldurma</td>
+</tr>
+<tr>
+<td><strong>Regresyon modeli</strong></td>
+<td>Eksik değeri tahmin edebilirsin</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Veri Optimizasyonu</h2>
+<p>Büyük veri kümelerinin işlenmesi ve zaman kısıtlamaları nedeniyle veri optimizasyonu gerekebilir. Optimizasyondan önce veri temizliği yapılması önemlidir.</p>
+<p>Veri çok büyükse işlem zorlaşır.<br />
+AMA veri azaltıldığında bile bilgi kaybolmazsa,<br />
+optimizasyon yapılabilir.</p>
+<h3>Hangi Yollarla?</h3>
+<ul>
+<li><strong>Veri birleştirme:</strong> Birden fazla tabloyu tek hale getir  </li>
+<li><strong>Veri küpü:</strong> Farklı boyutlardan bakmak için  </li>
+<li><strong>Boyut indirgeme:</strong> Çok fazla sütun varsa azaltılabilir (PCA gibi yöntemlerle)  </li>
+<li><strong>Örnekleme:</strong> Büyük veriden küçük örnek almak  </li>
+<li><strong>Boyut sıkıştırma:</strong> Bellekten tasarruf sağlamak  </li>
+</ul>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Eksik verilerin doldurulduğu diyagram.<br />
+Boyut indirgenmiş veriyle ML model eğitimi.  </p>
+</blockquote>
+<hr />
+<h2>Veri Bütünlüğü Nedir?</h2>
+<p>Veri bütünlüğü,<br />
+verinin yaşam döngüsü boyunca<br />
+doğruluğunun ve tutarlılığın<br />
+korunmasını sağlar.</p>
+<p>AMA bazı şeyler bu bütünlüğü bozabilir:</p>
+<h3>Veri Bütünlüğünü Bozanlar:</h3>
+<ul>
+<li><strong>Kötü niyetli işlemler</strong> – kötü amaçlı erişim  </li>
+<li><strong>İnsan hatası</strong> – yanlış veri girişi  </li>
+<li><strong>Donanım hatası</strong> – disk arızaları, sensör sorunları  </li>
+<li><strong>Tasarım hatası</strong> – uygunsuz veri yapısı  </li>
+</ul>
+<h3>Veri Bütünlüğünü Sağlayanlar:</h3>
+<ul>
+<li><strong>Standart prosedürler:</strong> Herkes aynı kurallara göre çalışmalı  </li>
+<li><strong>Veritabanı tasarımı:</strong> Primary key, foreign key tanımları ile bütünlük sağlanır  </li>
+<li><strong>Düzenli bakım:</strong> Veri yıpranmaz ama yazılım bozulabilir  </li>
+<li><strong>Veri doğrulama kuralları:</strong> Giriş sırasında kontrol sağlanması, veri doğrulama kurallarının oluşturulmasıdır. </li>
+</ul>
+<hr />
+<h2>Son Söz</h2>
+<p>Veri bilimi, veriyle başlar.<br />
+AMA veri kaliteli değilse,<br />
+sonuçlar yanıltıcı olur.</p>
+<p>Veri temizlenmelidir.<br />
+Optimize edilmelidir.<br />
+Bütün kalitede korunmalıdır.</p></div>
+    </div>
+</body>
+</html>

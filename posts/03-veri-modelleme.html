@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Veri Modelleme</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>Veri Modelleme</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-03</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>modelleme</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri modeli</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>yapılandırma</span>
+        <div class='prose max-w-none mt-4'><h1>Veri Modelleme</h1>
+<h2>Sayıların Anlamını Tanımlamak</h2>
+<p>Veri bilimi projelerinde her şey veriyle başlar.<br />
+AMA veri ne anlama geliyor?<br />
+Nasıl bir yapıyla saklanıyor?<br />
+Hangi ilişkiler var?</p>
+<p>Bu soruların cevabını veri modelleme verir.</p>
+<p>Veri modelleme;<br />
+verilerin nasıl tanımlandığını,<br />
+nasıl yapılandırıldığını,<br />
+ve birbirleriyle nasıl ilişkilendirildiğini gösterir.</p>
+<p>Veri modeli, yazılımdaki mimari plan gibidir.<br />
+Bina önceden çizilir.<br />
+Sonra inşa edilir.<br />
+Veri modeli olmadan sistemler düzensiz olur.<br />
+Ve zamanla çöker.</p>
+<hr />
+<h2>Veri Nedir?</h2>
+<p>Veri, ham maddedir.<br />
+İşlenmemiş sayılardır.<br />
+Metinlerdir.<br />
+Resimlerdir.<br />
+AMA anlam kazanmadığı sürece sessiz kalır.</p>
+<p>Ex:<br />
+“Ahmet” bir isimdir.<br />
+AMA sadece “Ahmet” yazarsa, bu veri değildir.<br />
+“Müşteri Adı: Ahmet” derse, artık bağlam kazanmıştır.</p>
+<hr />
+<h2>Veri Modelleme Nedir?</h2>
+<p>Veri modelleme, verilerin yapısını tanımlamaktır.<br />
+Veri tabanında neler olacak?<br />
+Nasıl ilişkili olacaklar?<br />
+Hangi kurallar geçerli olacak?</p>
+<p>Bu soruların hepsi veri modellemesiyle çözülür.</p>
+<h3>Kullanım Alanları:</h3>
+<ul>
+<li>İş Zekası (Business Intelligence)  </li>
+<li>Veri Madenciliği  </li>
+<li>Veri Ambarı Geliştirme  </li>
+<li>Raporlama  </li>
+<li>Analitik Uygulamalar  </li>
+</ul>
+<p>Veri modelleme ile iş süreçleri daha tutarlı hale gelir.<br />
+Veri akışı düzenli olur.<br />
+Analizler daha anlamlı sonuçlar verir.</p>
+<hr />
+<h2>Veri Modelinin Önemi</h2>
+<p>Veri modeli, soyut bir plandır.<br />
+AMA onun eksik olduğu yerde:<br />
+- Veri tekrar eder<br />
+- Tutarlılık bozulur<br />
+- Kararlar yanlış olur  </p>
+<h3>Neden Gerekli?</h3>
+<ul>
+<li>Nesneler doğru temsil edilmelidir  </li>
+<li>Kurallar tanımlanmalıdır  </li>
+<li>Veri bütünlüğü sağlanmalıdır  </li>
+<li>Eksik veya gereksiz veriler tespit edilmelidir  </li>
+</ul>
+<p>Model olmadan veri kargaşadır.<br />
+Model ile veri anlaşılır.</p>
+<hr />
+<h2>Veri Modeli Türleri</h2>
+<h3>1. Kavramsal Veri Modeli – Sistem Ne İçeriyor?</h3>
+<p>Veri modelinin en üst düzeyidir.<br />
+Teknik detay yoktur.<br />
+Yalnızca ana nesneler ve ilişkiler belirlenir.</p>
+<h4>Kimler için kullanılır?</h4>
+<ul>
+<li>İş analistleri  </li>
+<li>Yöneticiler  </li>
+<li>Veri mimarları  </li>
+</ul>
+<p>Ex:<br />
+Bir üniversitede öğrenciler ve dersler var.<br />
+AMA nasıl bağlılar?<br />
+Her öğrenci birden fazla derse kayıt olabilir mi?<br />
+Her dersi kim öğretiyor?</p>
+<p>Bu model, sistemin genel yapısını gösterir.</p>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Varlıklar arası ilişki diyagramı.<br />
+Öğrenci ↔ Ders ↔ Hoca  </p>
+</blockquote>
+<hr />
+<h3>2. Mantıksal Veri Modeli – Nasıl Tanımlanmalı?</h3>
+<p>Daha detaylıdır.<br />
+Veri ilişkileri tanımlanır.<br />
+AMA teknolojiden bağımsız çalışır.</p>
+<h4>Ne içerir?</h4>
+<ul>
+<li>Varlıklar (Entities)  </li>
+<li>Nitelikler (Attributes)  </li>
+<li>İlişkiler (Relationships)  </li>
+</ul>
+<p>Ex:<br />
+Müşteri varlığına bakalım.<br />
+ID, ad, soyad, doğum tarihi özellikleri vardır.<br />
+Satış varlığına sahip.<br />
+Ürünlerle ilişkilidir.  </p>
+<p>Model, tüm bu bağlantıları gösterir.<br />
+AMA henüz SQL ya da NoSQL’e göre yazılmamıştır.</p>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Tablo benzeri yapılar.<br />
+Her birinde kolonlar.<br />
+Arada oklarla bağlantılar  </p>
+</blockquote>
+<hr />
+<h3>3. Fiziksel Veri Modeli – Gerçek Ortama Göre Yapılanma</h3>
+<p>Gerçek dünyadaki uygulama aşamasıdır.<br />
+RDBMS&rsquo;e göre yapılır.<br />
+Veritabanına uygun şekilde şekillenir.</p>
+<h4>Ne içerir?</h4>
+<ul>
+<li>Tablo isimleri  </li>
+<li>Kolon tipleri  </li>
+<li>Primary Key, Foreign Key  </li>
+<li>Indexler  </li>
+</ul>
+<p>Ex:<br />
+Müşteri tablosunda <code>customer_id</code> primary key’tir.<br />
+Satış tablosunda <code>customer_id</code> foreign key’tir.<br />
+Böylece iki tablo birbirine bağlanır.</p>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Fiziksel tablolar.<br />
+PK ve FK gösterimi.<br />
+Veritabanı şeması  </p>
+</blockquote>
+<hr />
+<h2>Veri Modeli ile İlgili Temel Kavramlar</h2>
+<h3>Varlık (Entity)</h3>
+<p>Gerçek dünyadaki bir nesnedir.<br />
+Müşteri, ürün, sipariş gibi.</p>
+<h3>Nitelik (Attribute)</h3>
+<p>Varlığın özellikleridir.<br />
+Müşteri varsa, adı, soyadı, doğum tarihi nitelikleridir.</p>
+<h3>İlişki (Relationship)</h3>
+<p>Varlıklar arasındaki bağdır.<br />
+Bir müşteri birçok ürünü satın alabilir.<br />
+Bir ürün birçok müşteriyi çekebilir.</p>
+<hr />
+<h2>Örnek 1: Müşteri ve Ürün Satışı</h2>
+<h3>Varlıklar:</h3>
+<ul>
+<li><strong>Müşteri:</strong> ID, ad, soyad  </li>
+<li><strong>Ürün:</strong> ürün no, ürün adı, fiyatı  </li>
+</ul>
+<h3>İlişki:</h3>
+<p>Müşteri → Ürünleri satın alır.</p>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Müşteri tablosu ↔ Sipariş tablosu ↔ Ürün tablosu  </p>
+</blockquote>
+<hr />
+<h2>Örnek 2: Öğrenciler ve Dersler</h2>
+<h3>Varlıklar:</h3>
+<ul>
+<li><strong>Öğrenci:</strong> numara, ad, soyad, cinsiyet, doğum tarihi  </li>
+<li><strong>Ders:</strong> dersID, dersAdı, dersHocası, dersSaati  </li>
+</ul>
+<h3>İlişki:</h3>
+<p>Öğrenci ↔ Ders kayıtları  </p>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Öğrenci tablosu ↔ Kayıt tablosu ↔ Ders tablosu  </p>
+</blockquote>
+<hr />
+<h2>Son Söz</h2>
+<p>Veri modelleme,<br />
+veriyi anlamak için yapılan ilk adımdır.<br />
+Sayılar arasında yatan bağlantıları gösterir.<br />
+İş süreçlerini düzenler.<br />
+Kararları destekler.</p>
+<p>Kavramsal modelle başlayıp<br />
+mantıksal modele geçer.<br />
+Sonunda fiziksel yapıya oturturuz.</p>
+<p>Veri bilimi projesi yapacaksan,<br />
+modelle başlar,<br />
+analizle devam eder,<br />
+kararla biter.</p>
+<hr /></div>
+    </div>
+</body>
+</html>

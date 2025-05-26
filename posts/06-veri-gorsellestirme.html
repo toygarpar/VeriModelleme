@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Veri Görselleştirme</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>Veri Görselleştirme</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-06</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>görselleştirme</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>grafik</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>matplotlib</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>seaborn</span>
+        <div class='prose max-w-none mt-4'><h1>Veri Görselleştirme</h1>
+<h2>Veri Görselleştirme Nedir?</h2>
+<p>Veri görselleştirme, verilerin grafiksel öğeler (çizelgeler, grafikler, şekiller, haritalar vb.) aracılığıyla sunulmasıdır. Bu teknik:</p>
+<ul>
+<li>
+<p>Soyut verileri somut görsellere dönüştürür</p>
+</li>
+<li>
+<p>Büyük veri kümelerini anlaşılır hale getirir</p>
+</li>
+<li>
+<p>Çok boyutlu veriyi 2D/3D temsillere indirger</p>
+</li>
+<li>
+<p>Veri hikayeleri oluşturarak etkili iletişim sağlar</p>
+</li>
+</ul>
+<h2>Veri Görselleştirmenin Amaçları</h2>
+<ol>
+<li>
+<p><strong>Bilgiyi Görselleştirme</strong>: Karmaşık kavramları anlaşılır kılmak</p>
+</li>
+<li>
+<p><strong>Yeni İlişkiler Keşfetme</strong>: Verideki gizli örüntüleri ortaya çıkarmak</p>
+</li>
+<li>
+<p><strong>Hipotez Testi</strong>: Varsayımları görsel kanıtlarla sınamak</p>
+</li>
+<li>
+<p><strong>Yapıları Düzenleme</strong>: Veriyi anlamlı şekillerde organize etmek</p>
+</li>
+<li>
+<p><strong>İçgörü Üretme</strong>: Stratejik kararları destekleyecek bulgular sağlamak</p>
+</li>
+</ol>
+<h2>Veri Görselleştirmenin Faydaları</h2>
+<p>✔ <strong>Farkındalık Artışı</strong>: Verideki önemli noktaları vurgular<br />
+✔ <strong>Desen Keşfi</strong>: Gizli eğilimleri ve anomalileri ortaya çıkarır<br />
+✔ <strong>Karar Desteği</strong>: Yöneticilere kanıta dayalı karar alma imkanı sunar<br />
+✔ <strong>Hedefli İletişim</strong>: Doğru mesajı doğru kitleye iletir<br />
+✔ <strong>Performans İyileştirme</strong>: İş süreçlerinde verimlilik artışı sağlar</p>
+<h2>Sayıların Hikâyesini Görselle Anlatmak</h2>
+<p>Sayılar sessizdir.<br />
+AMA görseller konuşur.<br />
+Görselleştirme ile veriler anlaşılır.<br />
+Ve bu anlayış sayesinde kararlar alınır.</p>
+<p>Veri görselleştirme;<br />
+sayıları şekillere,<br />
+grafiklere,<br />
+renklere dönüştürmek demektir.</p>
+<p>AMAÇ basittir:<br />
+bilgiyi daha iyi anlamak,<br />
+kalıpları görmek,<br />
+ve doğru kararı almak.</p>
+<hr />
+<h2>Neden Görselleştirme Yaparız?</h2>
+<h3>1. Stratejik Planlama</h3>
+<p>Geleceği planlamak için geçmişe bakarız.<br />
+Veri bize yön gösterir.<br />
+AMA sadece görsel olarak.</p>
+<h3>2. Karar Vermek İçin</h3>
+<p>Büyük veri kümeleri karmaşık olabilir.<br />
+Görseller ise tek bir bakışta bilgi sunar.<br />
+Yüksek satış mı? Düşüş mü?<br />
+Bunu hemen görürüz.</p>
+<h3>3. Aykırı Değerleri Tespit Etmek İçin</h3>
+<p>Bazı sayılar diğerlerinden çok uzaktır.<br />
+Bunlara outlier denir.<br />
+Grafiklerde hemen dikkat çekerler.</p>
+<h3>4. Soyut Veriyi Fiziksel Hale Getirmek</h3>
+<p>Sayılar soyuttur.<br />
+AMA grafikler somuttur.<br />
+Böylece veriyle ilgili tüm fikirler anlaşılır.</p>
+<hr />
+<h2>Veri Görselleştirme Aşamaları</h2>
+<h3>1. <strong>Verileri İçe Aktarma</strong></h3>
+<p>Veri farklı kaynaklardan gelir.<br />
+CSV dosyasından olabilir.<br />
+API&rsquo;den olabilir.<br />
+Excel ya da veritabanından.</p>
+<p>AMA ilk adım budur:<br />
+veriyi alıp sisteme sokmak.</p>
+<h3>2. <strong>Veri Hazırlama</strong></h3>
+<p>Veri eksik olabilir.<br />
+Yanlış değerler içerebilir.<br />
+Düzenlenmeli.<br />
+Temizlenmeli.<br />
+Normalize edilmeli.</p>
+<p>AMA sonra görselleştirme için hazır hale gelir.</p>
+<h3>3. <strong>Veri İşleme</strong></h3>
+<p>Veriler gruplanır.<br />
+Toplanır.<br />
+Filtrelenir.<br />
+Ve görselleştirilecek olanlar seçilir.</p>
+<h3>4. <strong>Haritalama</strong></h3>
+<p>Sayılar artık şekiller halini alır.<br />
+Her değişken bir çizgiye, renge, boyuta dönüşür.</p>
+<p>Ex:<br />
+Satış miktarı → çubuk grafiğin yüksekliği<br />
+Zaman → X ekseni<br />
+Kategori → Renk  </p>
+<h3>5. <strong>Rendering – Görsel Temsil</strong></h3>
+<p>Son aşama budur.<br />
+Veri ekrana yansıtılır.<br />
+Tablodan çıkar.<br />
+Grafiğe girer.</p>
+<p>Artık veri, gözle görülür.<br />
+Anlaşılmıştır.<br />
+Yorumlanmıştır.</p>
+<hr />
+<h2>Veri Görselleştirme Yöntemleri</h2>
+<table>
+<thead>
+<tr>
+<th>Grafik Türü</th>
+<th>Açıklama</th>
+<th>Kullanım Alanı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Çubuk Grafik</strong></td>
+<td>Kategoriler arası karşılaştırma yapmak için kullanılır. Yatay veya dikey olabilir.</td>
+<td>Ürün satışı, şehir bazlı karşılaştırmalar</td>
+</tr>
+<tr>
+<td><strong>Histogram</strong></td>
+<td>Sayısal verilerin dağılımını gösterir. Hangi değer kaç kez tekrar etmiş?</td>
+<td>Yaş dağılımı, fiyat analizi</td>
+</tr>
+<tr>
+<td><strong>Kabarcık Haritası</strong></td>
+<td>Coğrafi veri üzerinde daire büyüklüğüne göre veri sunar. Daire büyükse veri yüksek değerlidir.</td>
+<td>Şehir bazlı satışlar, nüfus yoğunluğu</td>
+</tr>
+<tr>
+<td><strong>Radar Grafiği</strong></td>
+<td>Çoklu değişkenleri karşılaştırır. Sapmaları gösterir.</td>
+<td>Performans karşılaştırmaları, ürün analizleri</td>
+</tr>
+<tr>
+<td><strong>Marimekko Grafiği</strong></td>
+<td>İki değişken üzerinden kategorik verileri görselleştirir.</td>
+<td>Pazar payı, gelir-kar analizleri</td>
+</tr>
+<tr>
+<td><strong>Gantt Grafiği</strong></td>
+<td>Faaliyetlerin başlangıç ve bitiş zamanlarını gösterir.</td>
+<td>Proje yönetim sistemleri</td>
+</tr>
+<tr>
+<td><strong>Dağılım Grafiği (Scatter Plot)</strong></td>
+<td>İki değişken arasındaki ilişkiyi gösterir.</td>
+<td>Gelir vs harcama analizi</td>
+</tr>
+<tr>
+<td><strong>Isı Haritası (Heatmap)</strong></td>
+<td>Verileri renk yoğunluğuyla ifade eder.</td>
+<td>Sıcaklık haritaları, kullanıcı davranışları</td>
+</tr>
+<tr>
+<td><strong>Pasta Grafiği</strong></td>
+<td>Bütün içindeki oranları gösterir.</td>
+<td>Satış yüzdesi, bütçe dağılımı</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>📊 Örnek Grafik Açıklamaları:<br />
+- Çubuk grafikte yükseklik satış miktarıdır.<br />
+- Kabarcık haritasında daire büyüdükçe şehrin nüfusu artar.<br />
+- Gantt grafiğinde her çubuk bir görevdir. Uzunluğu süreyi gösterir.<br />
+- Radar grafiğinde sapmalar performans farklarını ortaya koyar.<br />
+- Marimekko grafiğinde hem kategori hem de ikinci bir değişken yer alır.</p>
+</blockquote>
+<hr />
+<h2>Veri Görselleştirme Araçları</h2>
+<h3>1. <strong>Infografik</strong></h3>
+<p>Bilgiyi görsel temalarda sunmak içindir.<br />
+Basit ama güçlüdür.<br />
+Okuyucu dikkatini çeker.  </p>
+<p>Ex:<br />
+Covid istatistikleri<br />
+Ya da seçim sonuçları infografiklerle kolayca anlaşılır.</p>
+<h3>2. <strong>Timeline (Zaman Çizelgesi)</strong></h3>
+<p>Zaman içinde olayları sıralamak içindir.<br />
+Tarihler arasında bağlantı kurar.<br />
+Ex:<br />
+Şirket tarihi, proje aşamaları  </p>
+<h3>3. <strong>Motion Chart (Hareketli Grafik)</strong></h3>
+<p>Zamanla değişim gösteren veriler için idealdir.<br />
+Veriler hareket eder.<br />
+Eğilimler animasyonla izlenir.  </p>
+<p>Ex:<br />
+Ülkeler arası gelir ve sağlık oranlarının yıllara göre değişimi  </p>
+<h3>4. <strong>Word Cloud (Kelime Bulutu)</strong></h3>
+<p>Metin verisinde sık kullanılan kelimeleri büyük gösterir.<br />
+Az kullanılanlar küçük kalır.  </p>
+<p>Ex:<br />
+Müşteri yorumlarında en çok geçen kelimeleri görmek için kullanılır.</p>
+<h3>5. <strong>Clustergram</strong></h3>
+<p>Hiyerarşik kümelemeyi görselleştirir.<br />
+Kümeler nasıl oluştu?<br />
+Nasıl ayrıştı?<br />
+Bu soruların cevabı burada.</p>
+<p>Ex:<br />
+Müşteri segmentasyonu sürecinin görselleştirilmesi  </p>
+<h3>6. <strong>Dashboard (Kontrol Paneli)</strong></h3>
+<p>Birkaç önemli göstergenin aynı yerde toplanmasıdır.<br />
+Karar vericiye hızlı bilgi sağlar.<br />
+Stratejiyi şekillendirir.</p>
+<p>Ex:<br />
+Satış dashboard&rsquo;unda satış sayısı, gelir, müşteri sayısı<br />
+aynı anda görülebilir.</p>
+<hr />
+<h2>Veri Görselleştirme Teknikleri</h2>
+<table>
+<thead>
+<tr>
+<th>Teknik</th>
+<th>Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hareketli Grafikler (Motion Chart)</strong></td>
+<td>Zaman içindeki değişimi gösterir. Ex: Ülkeler arası gelir eğilimleri</td>
+</tr>
+<tr>
+<td><strong>Kelime Bulutu (Word Cloud)</strong></td>
+<td>Metindeki en çok kullanılan kelimeler büyük görünür. Ex: Haberlerden anahtar kelimeler</td>
+</tr>
+<tr>
+<td><strong>Clustergram</strong></td>
+<td>Kümeleme işlemini görselleştirir. Ex: Müşteri segmentasyonu</td>
+</tr>
+<tr>
+<td><strong>Dashboard</strong></td>
+<td>Birden fazla metriği tek bir panelde toplar. Ex: Satış takibi</td>
+</tr>
+</tbody>
+</table>
+<h2>En İyi Uygulamalar</h2>
+<ol>
+<li>
+<p><strong>Hedef Kitleye Uygun Tasarım</strong>: Teknik ekip vs. yönetim için farklı yaklaşımlar</p>
+</li>
+<li>
+<p><strong>Basitlik İlkesi</strong>: Gereksiz karmaşıklıktan kaçınma</p>
+</li>
+<li>
+<p><strong>Renk Kullanımı</strong>: Anlamlı ve erişilebilir renk paletleri</p>
+</li>
+<li>
+<p><strong>Etkileşim Eklemek</strong>: Filtreleme ve detaylandırma özellikleri</p>
+</li>
+</ol>
+<h2>5. <strong>Bağlamsal Bilgi</strong>: Grafiklere açıklayıcı notlar ekleme</h2>
+<h2>Son Söz</h2>
+<p>Veri bilimi, veriden anlam çıkarmaktır.<br />
+AMA veri görselleştirilmeden<br />
+bu anlam tam olarak aktarılamaz.</p>
+<p>Görselleştirme olmadan<br />
+veri sessiz kalır.<br />
+Analiz karışır.<br />
+Karar zorlaşır.</p>
+<p>Veri görselleştirme,<br />
+sayıların hikâyeyi anlatmasına izin verir.<br />
+Desenleri gösterir.<br />
+Değişimleri yakalar.<br />
+Anormal şeyleri vurgular.</p>
+<p>Ve bu görseller ile<br />
+kararlarımız netleşiyor.<br />
+Yol belirleniyor.<br />
+Gelecek tahmin ediliyor.</p>
+<hr /></div>
+    </div>
+</body>
+</html>

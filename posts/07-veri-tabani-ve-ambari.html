@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Veri Tabanı ve Ambarı</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>Veri Tabanı ve Ambarı</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-07</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veritabanı</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri ambarı</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>ETL</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>OLAP</span>
+        <div class='prose max-w-none mt-4'><h1>Veri Tabanı ve Veri Ambarı</h1>
+<h2>Veriyi Saklamak ve Analiz Edebilmek İçin İki Farklı Yapı</h2>
+<p>Veriler farklı yerlerde saklanır.<br />
+AMA her bir yer farklı iş yapar.  </p>
+<p><strong>Veritabanı</strong>, günlük işlemler için kullanılır.<br />
+<strong>Veri Ambarı</strong>, analizler için saklanır.  </p>
+<p>Veriler sessizken,<br />
+onları nerede tuttuğumuz önemlidir.<br />
+Çünkü veriyi nasıl saklarsan,<br />
+önceki gibi analiz edersin.</p>
+<hr />
+<h2>1. Veritabanı Nedir?</h2>
+<h2>Veri Tabanı (Database)</h2>
+<h3>Tanım ve Temel Özellikler</h3>
+<p>Veri tabanı, günlük işlemler için optimize edilmiş yapılandırılmış veri topluluğudur. OLTP (Online Transaction Processing) sistemleri için tasarlanmıştır.</p>
+<h3>Avantajlar</h3>
+<ul>
+<li><strong>Veri Bütünlüğü</strong>: Normalizasyon sayesinde veri tekrarını minimize eder</li>
+<li><strong>Hızlı Erişim</strong>: İndekslerle optimize edilmiş sorgu performansı</li>
+<li><strong>İşlem Yönetimi</strong>: ACID (Atomicity, Consistency, Isolation, Durability) prensipleri</li>
+<li><strong>Esnek İşlemler</strong>: CRUD (Create, Read, Update, Delete) operasyonları</li>
+</ul>
+<h3>Dezavantajlar</h3>
+<ul>
+<li><strong>Maliyet</strong>: Enterprise çözümlerde lisans ve bakım maliyetleri</li>
+<li><strong>Karmaşıklık</strong>: Büyük ölçekli sistemlerde yönetim zorluğu</li>
+<li><strong>Analitik Limit</strong>: Kompleks analizler için optimize değildir</li>
+</ul>
+<h3>Temel Bileşenler</h3>
+<table>
+<thead>
+<tr>
+<th>Bileşen</th>
+<th>Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tablo</strong></td>
+<td>Satır (record) ve sütunlardan (field) oluşan veri yapısı</td>
+</tr>
+<tr>
+<td><strong>Anahtarlar</strong></td>
+<td>Primary Key (benzersiz tanımlayıcı), Foreign Key (ilişki kurucu)</td>
+</tr>
+<tr>
+<td><strong>SQL</strong></td>
+<td>DDL (şema tanım), DML (veri işlem), DCL (erişim kontrol)</td>
+</tr>
+<tr>
+<td><strong>İndeksler</strong></td>
+<td>Sorgu performansını artıran yapılar</td>
+</tr>
+</tbody>
+</table>
+<h3>Ana Kavramlar:</h3>
+<h4>📋 <strong>Tablo</strong></h4>
+<p>Veri tabanında veriler satır ve sütunlarla saklanır.<br />
+Her tablo bir konuya hizmet eder.</p>
+<p>Ex:<br />
+Müşteri tablosu → müşteri bilgilerini taşır<br />
+Sipariş tablosu → sipariş geçmişini taşır</p>
+<h4>🔑 <strong>Anahtarlar</strong></h4>
+<p>Veriler arasında bağlantı kurmak içindir.</p>
+<h5>Primary Key</h5>
+<p>Her kaydın eşsiz olduğunu gösterir.<br />
+Boş olamaz.<br />
+Yinelenemez.</p>
+<p>Ex: <code>customer_id</code></p>
+<h5>Foreign Key</h5>
+<p>Başka tabloya bağlayan anahtardır.<br />
+Primary key ile ilişkilidir.</p>
+<p>Ex: <code>order.customer_id</code> → <code>customer.id</code></p>
+<h4>🔄 <strong>Join İşlemleri</strong></h4>
+<p>Birden fazla tabloyu birleştirir.<br />
+Her iki tablodaki ortak alanlar üzerinden yapılır.</p>
+<p>Ex:<br />
+Müşteri ve sipariş tablolarını birleştir.<br />
+Hangi müşteri ne aldı?<br />
+Bunu tek sorguda görebilirsin.</p>
+<hr />
+<h2>2. Veri Ambarı Nedir?</h2>
+<h2>Veri Ambarı (Data Warehouse)</h2>
+<h3>Tanım ve Temel Özellikler</h3>
+<p>OLAP (Online Analytical Processing) sistemleri için tasarlanmış, analitik odaklı büyük veri deposu.</p>
+<h3>Temel Özellikleri</h3>
+<ul>
+<li><strong>Konu Odaklı</strong>: Belirli analiz alanlarına yoğunlaşır</li>
+<li><strong>Entegre Yapı</strong>: Çoklu kaynaktan veri bütünleştirir</li>
+<li><strong>Zaman Boyutu</strong>: Tarihsel veri tutma kapasitesi</li>
+<li><strong>Değişmezlik</strong>: Genellikle salt okunur (read-only) yapı</li>
+</ul>
+<h3>Avantajlar</h3>
+<ul>
+<li><strong>Analitik Güç</strong>: Büyük veri kümelerinde kompleks analiz</li>
+<li><strong>Karar Desteği</strong>: Tarihsel trend analizleri</li>
+<li><strong>Sistem Performansı</strong>: OLTP ve OLAP iş yüklerini ayırır</li>
+<li><strong>Veri Bütünlüğü</strong>: Tek gerçek kaynak (single source of truth)</li>
+</ul>
+<h3>Dezavantajlar</h3>
+<ul>
+<li><strong>Uygulama Zorluğu</strong>: Kurulum ve bakım karmaşıklığı</li>
+<li><strong>Esneklik Eksikliği</strong>: Şema değişiklikleri zor</li>
+<li><strong>Maliyet</strong>: Büyük veri altyapı gereksinimi</li>
+</ul>
+<hr />
+<h2>Veritabanı mı, Veri Ambarı mı?</h2>
+<table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th><strong>Veritabanı (DB)</strong></th>
+<th><strong>Veri Ambarı (DW)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amacı</strong></td>
+<td>Günlük işlemler</td>
+<td>Analiz ve raporlama</td>
+</tr>
+<tr>
+<td><strong>Veri Türü</strong></td>
+<td>Güncel veri</td>
+<td>Geçmiş veri</td>
+</tr>
+<tr>
+<td><strong>İşlem Türü</strong></td>
+<td>OLTP (Online Transactional Processing)</td>
+<td>OLAP (Online Analytical Processing)</td>
+</tr>
+<tr>
+<td><strong>Veri Yapısı/Modeli</strong></td>
+<td>ER modeli</td>
+<td>Star / Snowflake schema</td>
+</tr>
+<tr>
+<td><strong>Performans</strong></td>
+<td>Hızlı işlem</td>
+<td>Uzun süreli analiz</td>
+</tr>
+<tr>
+<td><strong>Kullanıcılar</strong></td>
+<td>Yazılım geliştiriciler</td>
+<td>Veri bilimciler, BI uzmanları</td>
+</tr>
+<tr>
+<td><strong>SQL Kullanımı</strong></td>
+<td>Evet, sıkça</td>
+<td>Evet, ama daha karmaşık</td>
+</tr>
+<tr>
+<td><strong>Erişim</strong></td>
+<td>CRUD operasyonları</td>
+<td>Çoğunlukla okuma</td>
+</tr>
+<tr>
+<td><strong>Optimizasyon</strong></td>
+<td>Yazma performansı</td>
+<td>Okuma performansı</td>
+</tr>
+<tr>
+<td><strong>Zaman Boyutu</strong></td>
+<td>Mevcut veri</td>
+<td>Tarihsel veri</td>
+</tr>
+<tr>
+<td><strong>Boyut</strong></td>
+<td>GB-TB seviyesi</td>
+<td>TB-PB seviyesi</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Mimari Farklılıklar</h2>
+<h3>Veri Tabanı Mimarisi</h3>
+<ol>
+<li><strong>İlişkisel Model</strong>: Tablolar ve ilişkiler</li>
+<li><strong>Normalleştirme</strong>: 3NF (Üçüncü Normal Form) genellikle uygulanır</li>
+<li><strong>İşlem Odaklı</strong>: Hızlı insert/update operasyonları</li>
+</ol>
+<h3>Veri Ambarı Mimarisi</h3>
+<ol>
+<li><strong>Dimensional Model</strong>: Fact ve Dimension tabloları</li>
+<li><strong>Denormalizasyon</strong>: Analitik sorgular için optimize</li>
+<li><strong>ETL Süreci</strong>: Extract, Transform, Load iş akışı</li>
+<li><strong>Data Mart</strong>: Departmana özel alt ambar yapıları</li>
+</ol>
+<hr />
+<h2>Veri Ambarı Nasıl Çalışır?</h2>
+<p>Veri ambarı, üç aşamada çalışır:</p>
+<h3>1. <strong>Extract – Çekme</strong></h3>
+<p>Veriler dışarıdan alınır.<br />
+CSV, Excel, API, log dosyası…<br />
+Her yerden alınabilir.</p>
+<h3>2. <strong>Transform – Dönüşüm</strong></h3>
+<p>Veriler düzenlenir.<br />
+Temizlenir.<br />
+Standardize edilir.<br />
+Yeni özellikler çıkarılır.</p>
+<h3>3. <strong>Load – Yükleme</strong></h3>
+<p>Hazırlanan veriler veri ambarına yüklenir.<br />
+Burada analiz yapılır.<br />
+Raporlar hazırlanır.<br />
+Kararlar alınır.</p>
+<blockquote>
+<p>📊 Grafik Açıklaması:<br />
+Verilerin çeşitli kaynaklardan gelmesi → Transformasyon → Veri ambarına yükleme diyagramı  </p>
+</blockquote>
+<hr />
+<h2>Veritabanı vs Veri Ambarı</h2>
+<table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th><strong>Veritabanı</strong></th>
+<th><strong>Veri Ambarı</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Veri Tipi</strong></td>
+<td>Yapılandırılmış</td>
+<td>Yapılandırılmış + Yapılandırılmamış</td>
+</tr>
+<tr>
+<td><strong>Analiz Türü</strong></td>
+<td>Basit sorgular</td>
+<td>Karmaşık analizler</td>
+</tr>
+<tr>
+<td><strong>Zamanlama</strong></td>
+<td>Gerçek zamanlı</td>
+<td>Toplu işlem</td>
+</tr>
+<tr>
+<td><strong>Veri Akışı</strong></td>
+<td>Girdi çıkış var</td>
+<td>Sadece okunabilir veri</td>
+</tr>
+<tr>
+<td><strong>Şema</strong></td>
+<td>Normalleşmiş</td>
+<td>Star veya Snowflake Schema</td>
+</tr>
+<tr>
+<td><strong>Performans</strong></td>
+<td>Kayıt bazlı hızlı işlem</td>
+<td>Raporlama ve analiz için optimize</td>
+</tr>
+<tr>
+<td><strong>Kullanım Alanı</strong></td>
+<td>CRM, ERP sistemleri</td>
+<td>Satış analizi, müşteri segmentasyonu</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>SQL ile DB ve DW Arasındaki Fark</h2>
+<h3>✅ Veritabanı için SQL</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">customers</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
+</code></pre></div>
+
+<p>Anlık sorgular burada yapılır.<br />
+Kayıt eklenebilir, silinebilir, güncellenebilir.</p>
+<h3>✅ Veri Ambarı için SQL</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">city</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">sales</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_sales</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">sales_data</span><span class="w"> </span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">city</span><span class="p">;</span>
+</code></pre></div>
+
+<p>Toplu analizler burada yapılır.<br />
+Veri genellikle özetlenir.<br />
+Karar verme için kullanılır.</p>
+<hr />
+<h2>Kullanım Senaryoları</h2>
+<p><strong>Veri Tabanı İçin:</strong><br />
+- E-ticaret sipariş işleme<br />
+- Bankacılık işlemleri<br />
+- ERP sistem verileri<br />
+- CRM müşteri kayıtları</p>
+<p><strong>Veri Ambarı İçin:</strong><br />
+- Satış trend analizleri<br />
+- Finansal performans raporlama<br />
+- Müşteri segmentasyonu<br />
+- Tahmine dayalı analitik</p>
+<hr />
+<h2>Modern Gelişmeler</h2>
+<ul>
+<li><strong>Data Lake</strong>: Yapılandırılmamış veri depolama</li>
+<li><strong>Delta Lake</strong>: Transaction özellikli data lake</li>
+<li><strong>Data Mesh</strong>: Domain-driven dağıtık veri mimarisi</li>
+<li><strong>Cloud DW</strong>: Snowflake, BigQuery, Redshift gibi bulut çözümleri</li>
+</ul>
+<p>Veri tabanı ve veri ambarı birbirini tamamlayan sistemlerdir. Modern kurumsal mimarilerde her iki sistem de entegre şekilde kullanılarak hem operasyonel hem de analitik ihtiyaçlar karşılanmaktadır.</p>
+<hr />
+<h2>Son Söz</h2>
+<p>Veritabanı, veriyi saklamak içindir.<br />
+AMA veri ambarı, veriyi anlamak içindir.</p>
+<p>Birisi hareketlidir.<br />
+Diğeri düşündürücüdür.</p>
+<p>Biri günlük işlemlerde yürür.<br />
+Diğeri stratejik kararlarda konuşur.</p>
+<p>Veri bilimi projelerinde ikisi de gereklidir.<br />
+AMA farklı amaçlarla.  </p>
+<p>Veri önce veritabanından gelir.<br />
+Sonra veri ambarına aktarılır.<br />
+Ve oradan anlamlı sonuçlar çıkarılır.</p>
+<p>Sayılar sessizken<br />
+biz onları doğru yerde saklayıp<br />
+doğru şekilde dinlemeliyiz.</p>
+<hr /></div>
+    </div>
+</body>
+</html>

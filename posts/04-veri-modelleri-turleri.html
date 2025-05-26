@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Veri Modelleri ve Türleri</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>Veri Modelleri ve Türleri</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-04</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri modelleri</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>ilişkisel</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>NoSQL</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>yapı</span>
+        <div class='prose max-w-none mt-4'><h1>Veri Modellerinin Türleri</h1>
+<p>Veri modelleme, bir organizasyonun veri yapısını anlamak, tasarlamak ve uygulamak için kullanılan temel bir süreçtir. </p>
+<h2>Üç Seviye: Conceptual → Logical → Physical</h2>
+<p>Veri modelleme, bir veritabanının nasıl yapılandırılacağını gösterir.<br />
+AMA bu yapılandırma birden fazla aşamada olur.<br />
+Her aşama farklı bir amaca hizmet eder.</p>
+<p>Üç ana veri modeli vardır:<br />
+1. <strong>Kavramsal Model</strong> – Sistem ne içeriyor?<br />
+2. <strong>Mantıksal Model</strong> – Nasıl tanımlanmalı?<br />
+3. <strong>Fiziksel Model</strong> – Gerçek ortama göre nasıl çalışacak?</p>
+<p>Veri bilimi projelerinde her model farklı bir rol oynar.<br />
+Ve hep birlikte çalışır.</p>
+<hr />
+<h2>1. Kavramsal Veri Modeli</h2>
+<p>Tanım: Sistemin içerdiği temel varlıkları ve bunlar arasındaki ilişkileri gösteren üst düzey model.</p>
+<h3>Sistem Ne İçeriyor?</h3>
+<p>Bu model, sistemin genel yapısını gösterir.<br />
+Detay yoktur.<br />
+AMA temel varlıklar ve ilişkiler bellidir.</p>
+<h4><strong>Özellikleri</strong>:</h4>
+<ul>
+<li>
+<p>İş paydaşları ve veri mimarları tarafından kullanılır</p>
+</li>
+<li>
+<p>Gerçek dünya nesnelerini (varlıklar) ve bunların özelliklerini (nitelikler) tanımlar</p>
+</li>
+<li>
+<p>Varlıklar arasındaki ilişkileri gösterir</p>
+</li>
+<li>
+<p>Teknik detaylardan bağımsızdır</p>
+</li>
+<li>
+<p>Paydaşlar için ortak bir dil oluşturur</p>
+</li>
+</ul>
+<h4>Kimler Kullanır?</h4>
+<ul>
+<li>İş analistleri  </li>
+<li>Yöneticiler  </li>
+<li>Veri mimarları  </li>
+</ul>
+<h4>Örnek:</h4>
+<p>Bir alışveriş sitesinde şu varlıklar yer alabilir:<br />
+<strong>Müşteri</strong>, <strong>Ürün</strong>, <strong>Sipariş</strong></p>
+<p>AMA nasıl bağlılar?<br />
+Kim hangi ürünü aldı?<br />
+Hangi tarihlerde?</p>
+<p>Bu sorular henüz burada cevaplanmaz.<br />
+AMA varlıklar bellidir.</p>
+<blockquote>
+<p>📊 Grafik Açıklaması:<br />
+Varlık-ilişki diyagramında üç kutu: Müşteri, Ürün, Sipariş<br />
+Arada oklarla bağlantılar var ama detay yok  </p>
+</blockquote>
+<hr />
+<h2>2. Mantıksal Veri Modeli</h2>
+<p>Tanım: Veri öğelerinin yapısını ve ilişkilerini detaylı şekilde tanımlayan model.</p>
+<h3>Sistem Nasıl Tanımlanmalı?</h3>
+<p>Burada varlıklar daha net tanımlanır.<br />
+Nitelikler belirlenir.<br />
+Anahtarlar seçilmeye başlanır.</p>
+<p>AMA yine de teknolojiden bağımsız kalınır.<br />
+Yani SQL mi NoSQL mi kullanılacağı burada karar verilmez.</p>
+<h4>Özellikler:</h4>
+<ul>
+<li>Nitelikler detaylandırılır  </li>
+<li>Primary key belirlenir  </li>
+<li>Foreign key tanımlanır  </li>
+<li>Normalleştirme yapılır  </li>
+<li>İlişkiler netleştirilir  </li>
+</ul>
+<h4>Örnek:</h4>
+<p><strong>Müşteri</strong> varlığına bakalım:</p>
+<ul>
+<li><code>MusID</code> – Tam sayı (PK)  </li>
+<li><code>MusAdı</code> – Karakter  </li>
+<li><code>MusSoyadı</code> – Karakter  </li>
+<li><code>DogumTar</code> – Tarih  </li>
+</ul>
+<p><strong>Ürünler</strong>:</p>
+<ul>
+<li><code>UrunNo</code> – Tam sayı (PK)  </li>
+<li><code>UrunAdı</code> – Karakter  </li>
+<li><code>Fiyatı</code> – Para  </li>
+<li><code>StokAdedi</code> – Tam sayı  </li>
+</ul>
+<p>İlişkiler kurulur.<br />
+AMA tablo isimleri veya indexler henüz yoktur.</p>
+<blockquote>
+<p>📊 Grafik Açıklaması:<br />
+Tabloya benzeyen kutular.<br />
+Her kutuda nitelikler listelenmiş.<br />
+Bağlantılar çizilmiş.<br />
+AMA fiziksel sütun tipleri ve sistem detayları yok.</p>
+</blockquote>
+<hr />
+<h2>3. Fiziksel Veri Modeli</h2>
+<p>Tanım: Belirli bir veritabanı yönetim sisteminde uygulanacak teknik model.</p>
+<h3>Gerçek Ortama Göre Yapılandırma</h3>
+<p>Bu model, veritabanına uygulanacak son yapıdır.<br />
+Her şey netleştirilir.<br />
+Primary key kullanılır.<br />
+Foreign key tanımlanır.<br />
+Indexler oluşturulur.<br />
+Stored Procedure&rsquo;ler yazılır.</p>
+<p>Burada artık sistem belli bir teknolojiye bağlanmıştır.<br />
+MySQL, PostgreSQL, Oracle gibi RDBMS’lerde çalışır.</p>
+<h4>Özellikler:</h4>
+<ul>
+<li>Veritabanı şemasına uygun yapı  </li>
+<li>Tablo isimleri ve kolonlar tanımlanmış  </li>
+<li>PK ve FK açıkça belirtilmiş  </li>
+<li>Indexler ve constraint&rsquo;ler tanımlanmış  </li>
+<li>Stored procedure ve trigger bilgisi yer alabilir  </li>
+</ul>
+<h4>Örnek:</h4>
+<p><strong>Müşteri Tablosu</strong>  </p>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">musteri</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">mus_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">mus_adi</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="w">    </span><span class="n">mus_soyadi</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="w">    </span><span class="n">dogum_tarihi</span><span class="w"> </span><span class="nb">DATE</span>
+<span class="p">);</span>
+</code></pre></div>
+
+<p><strong>Ürün Tablosu</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">urun</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">urun_no</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">urun_adi</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">    </span><span class="n">fiyat</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">    </span><span class="n">stok_adedi</span><span class="w"> </span><span class="nb">INT</span>
+<span class="p">);</span>
+</code></pre></div>
+
+<p><strong>Sipariş Tablosu</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">siparis</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">siparis_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">mus_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">urun_no</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">tarih</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">mus_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">musteri</span><span class="p">(</span><span class="n">mus_id</span><span class="p">),</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">urun_no</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">urun</span><span class="p">(</span><span class="n">urun_no</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+
+<blockquote>
+<p>📊 Grafik Açıklaması:<br />
+Gerçek tablo yapıları.<br />
+PK ve FK işaretlenmiş.<br />
+Veritabanı motoruna özel yapılar.<br />
+Indexler, ilişkiler gösterilmiş.</p>
+</blockquote>
+<hr />
+<h2>Karşılaştırmalı Tablo: Veri Modeli Türleri</h2>
+<table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th><strong>Kavramsal</strong></th>
+<th><strong>Mantıksal</strong></th>
+<th><strong>Fiziksel</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amacı</strong></td>
+<td>Sistem kapsamını göstermek</td>
+<td>Yapısal ilişkiyi tanımlamak</td>
+<td>Gerçek uygulama için tasarım</td>
+</tr>
+<tr>
+<td><strong>Kime Yönelik</strong></td>
+<td>Paydaşlar</td>
+<td>Veri analistleri</td>
+<td>Veri mühendisleri</td>
+</tr>
+<tr>
+<td><strong>PK / FK</strong></td>
+<td>Yok</td>
+<td>Belirlenmiş ama uygulanmamış</td>
+<td>Uygulanmış</td>
+</tr>
+<tr>
+<td><strong>Teknoloji Bağımlılığı</strong></td>
+<td>Bağımsız</td>
+<td>Bağımsız</td>
+<td>Bağımlı (RDBMS’e özel)</td>
+</tr>
+<tr>
+<td><strong>Kullanım Alanı</strong></td>
+<td>Planlama</td>
+<td>Tasarım</td>
+<td>Gerçek üretim</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Veri Modeli Diyagramı Oluşturma</h2>
+<p>Veri modeli diyagramları genellikle şu araçlarla oluşturulur:</p>
+<ol>
+<li>
+<p><strong>ER Diyagramları</strong> (Varlık-İlişki diyagramları)</p>
+</li>
+<li>
+<p>UML Sınıf Diyagramları</p>
+</li>
+<li>
+<p>Özel veri modelleme araçları (ERwin, PowerDesigner, Lucidchart vb.)</p>
+</li>
+</ol>
+<p>Temel adımlar:</p>
+<ol>
+<li>
+<p>Varlıkları belirle</p>
+</li>
+<li>
+<p>Nitelikleri tanımla</p>
+</li>
+<li>
+<p>Birincil anahtarları ata</p>
+</li>
+<li>
+<p>İlişkileri çiz</p>
+</li>
+<li>
+<p>Kardinaliteleri belirle (1-1, 1-N, N-M)</p>
+</li>
+<li>
+<p>Fiziksel özellikleri ekle (veri tipleri, kısıtlamalar)</p>
+</li>
+</ol>
+<hr />
+<h2>Son Söz</h2>
+<p>Veri modellemek;<br />
+verilerin arasında bağlantı kurmaktır.<br />
+Sayıların anlam kazanması sürecidir.</p>
+<p>Kavramsal modelle başlayıp<br />
+mantıksal modele geçersin.<br />
+Sonunda fiziksel yapıyı kurarsın.</p>
+<p>Model olmadan veri sessiz kalır.<br />
+AMA model ile veri konuşur.<br />
+Ve biz dinleyip anlarız.</p>
+<p>Sayılar kendi başına anlam taşımaz.<br />
+AMA onları doğru yapıyla düzenlersen<br />
+bilgi doğar.<br />
+Karar alınır.<br />
+Geleceğe bakılır.</p>
+<hr /></div>
+    </div>
+</body>
+</html>

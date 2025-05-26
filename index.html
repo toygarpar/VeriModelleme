@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Veri Modelleme</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+    <!-- Fixed Tailwind CSS CDN -->
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827; /* dark gray */
+            color: #f9fafb; /* light text */
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <h1 class='text-4xl font-bold mb-2'>Veri Modelleme</h1>
+        <p class='text-lg text-gray-300 mb-6'>Bu eğitimin amacı, veri, iş analizi ve zekâsı, veri modelleme kavramlarının derinlemesine anlamak ve yönetimi hakkında bilgi edinmeyi öğrenmek isteyenler için hazırlanmıştır.</p>
+
+        <!-- Search Bar -->
+        <input type="text" id="searchInput" placeholder="Konu ismiyle ara..." class="w-full p-2 mb-4 rounded bg-gray-800 text-white border border-gray-600">
+
+        <h2 class='text-2xl font-semibold mb-4'>Eğitim - Konu Listesi</h2>
+        <div class='space-y-6' id="surahList">
+
+        <div class='border-b pb-4' id='surah-0'>
+            <h3 class='text-xl font-semibold surah-title'>Veri Hiyerarşisi</h3>
+            <p class='text-sm text-gray-400'>2025-06-01</p>
+            <p class='mb-2'>Veriden bilgiye giden yolda hiyerarşik yapı: Veri, bilgi, bilgelik arasındaki farklar.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>bilgi</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>hiyerarşi</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>temel kavram</span>
+            <a href='posts/01-veri-hiyerarsisi.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-1'>
+            <h3 class='text-xl font-semibold surah-title'>Veri Yapısı</h3>
+            <p class='text-sm text-gray-400'>2025-06-02</p>
+            <p class='mb-2'>Verinin yapısal olarak nasıl organize edildiği ve farklı veri yapıları nelerdir?</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri yapısı</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>data structure</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri türleri</span>
+            <a href='posts/02-veri-yapisi.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-2'>
+            <h3 class='text-xl font-semibold surah-title'>Veri Modelleme</h3>
+            <p class='text-sm text-gray-400'>2025-06-03</p>
+            <p class='mb-2'>Veri modellemeye giriş: Neden modelleriz? Hangi yaklaşımlar vardır?</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>modelleme</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri modeli</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>yapılandırma</span>
+            <a href='posts/03-veri-modelleme.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-3'>
+            <h3 class='text-xl font-semibold surah-title'>Veri Modelleri ve Türleri</h3>
+            <p class='text-sm text-gray-400'>2025-06-04</p>
+            <p class='mb-2'>İlişkisel, hiyerarşik, ağ ve NoSQL veri modelleri hakkında genel bakış.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri modelleri</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>ilişkisel</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>NoSQL</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>yapı</span>
+            <a href='posts/04-veri-modelleri-turleri.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-4'>
+            <h3 class='text-xl font-semibold surah-title'>Veri Kalitesi ve Bütünlüğü</h3>
+            <p class='text-sm text-gray-400'>2025-06-05</p>
+            <p class='mb-2'>Veri kalitesi nedir? Nasıl sağlanır? Eksik değerler, doğrulama ve bütünlük kuralları.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri kalitesi</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>doğrulama</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>eksik veri</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>bütünlük</span>
+            <a href='posts/05-veri-kalitesi-ve-butunlugu.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-5'>
+            <h3 class='text-xl font-semibold surah-title'>Veri Görselleştirme</h3>
+            <p class='text-sm text-gray-400'>2025-06-06</p>
+            <p class='mb-2'>Sayıları görsellere dönüştürmek: Grafikler, tablolar ve dashboard örnekleri.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>görselleştirme</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>grafik</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>matplotlib</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>seaborn</span>
+            <a href='posts/06-veri-gorsellestirme.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-6'>
+            <h3 class='text-xl font-semibold surah-title'>Veri Tabanı ve Ambarı</h3>
+            <p class='text-sm text-gray-400'>2025-06-07</p>
+            <p class='mb-2'>Veri tabanı ile ambar arasındaki farklar ve kullanım alanları.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veritabanı</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri ambarı</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>ETL</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>OLAP</span>
+            <a href='posts/07-veri-tabani-ve-ambari.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-7'>
+            <h3 class='text-xl font-semibold surah-title'>İş Analizi</h3>
+            <p class='text-sm text-gray-400'>2025-06-08</p>
+            <p class='mb-2'>İş süreçlerine göre verilerin analizi ve raporlanması.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>iş analizi</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri analizi</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>insights</span>
+            <a href='posts/08-is-analizi.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-8'>
+            <h3 class='text-xl font-semibold surah-title'>Kullanıcı Arayüzü Kavramı</h3>
+            <p class='text-sm text-gray-400'>2025-06-09</p>
+            <p class='mb-2'>Veri ürünlerinde kullanıcı arayüz tasarımı ve etkileri.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>UI</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>kullanıcı deneyimi</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>dashboard</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>tasarım</span>
+            <a href='posts/09-kullanici-arayuzu-kavrami.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-9'>
+            <h3 class='text-xl font-semibold surah-title'>Veri Madenciliği Nedir?</h3>
+            <p class='text-sm text-gray-400'>2025-06-10</p>
+            <p class='mb-2'>Veri madenciliğine giriş: Örüntüler, ilişkiler ve keşifsel analiz.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri madenciliği</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>pattern discovery</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>analiz</span>
+            <a href='posts/10-veri-madenciligi.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        </div>
+    </div>
+
+    <!-- Search Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('searchInput');
+            const surahCards = document.querySelectorAll('#surahList .border-b');
+
+            searchInput.addEventListener('input', function () {
+                const query = this.value.toLowerCase();
+
+                surahCards.forEach(card => {
+                    const title = card.querySelector('.surah-title').textContent.toLowerCase();
+                    if (title.includes(query)) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
